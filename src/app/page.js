@@ -1,5 +1,6 @@
 import {
   FaWhatsapp,
+  FaInstagram,
   FaHome,
   FaWifi,
   FaCamera,
@@ -27,11 +28,11 @@ export default function Home() {
             className="mx-auto mb-4 rounded-lg shadow-md"
             src="/img/logo.png"
             alt="logo"
-            width={300}
-            height={300}
+            width={400}
+            height={400}
           />
-          <p className="text-3xl font-bold text-gray-100">
-            Tecnologia e conforto na sua casa
+          <p className="text-4xl font-bold text-gray-100">
+            Tecnologia e conforto para sua casa
           </p>
         </div>
       </header>
@@ -42,7 +43,8 @@ export default function Home() {
         <p className="mt-6 text-gray-700 text-xl leading-relaxed">
           Transformamos sua casa ou estabelecimento comercial em um ambiente
           inteligente! Oferecemos soluções de automação, redes Wi-Fi e CFTV para
-          mais segurança, conforto e economia.
+          mais segurança, conforto e economia.<br></br>
+          Atendemos Bertioga e Região do Litoral Norte de São Paulo.
         </p>
       </section>
       {/* Serviços */}
@@ -76,8 +78,10 @@ export default function Home() {
               className="p-6 border border-gray-700 rounded-lg shadow bg-white"
             >
               {service.icon}
-              <h3 className="font-bold mt-2 text-gray-600">{service.title}</h3>
-              <p className="text-gray-600 mb-4">{service.desc}</p>
+              <h3 className="font-bold mt-2 text-gray-600 text-2xl">
+                {service.title}
+              </h3>
+              <p className="text-gray-600 mb-4 text-xl">{service.desc}</p>
               <div className="grid grid-cols-2 gap-4">
                 {service.images.map((img, i) => (
                   <Image
@@ -121,10 +125,10 @@ export default function Home() {
         <h2 className="text-2xl font-bold">Entre em Contato</h2>
         <div className="mt-4 flex justify-center space-x-6">
           <a
-            href="https://wa.me/+5513991545193"
-            className="text-green-500 text-4xl hover:scale-110 transition-transform duration-300"
+            href="https://instagram.com/inova.smarthome"
+            className="text-pink-400 text-4xl hover:scale-110 transition-transform duration-300"
           >
-            <FaWhatsapp />
+            <FaInstagram />
           </a>
           <a
             href="mailto:diogoinovahome@gmail.com"
