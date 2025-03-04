@@ -1,101 +1,146 @@
+import {
+  FaWhatsapp,
+  FaHome,
+  FaWifi,
+  FaCamera,
+  FaEnvelope,
+} from "react-icons/fa";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="bg-black min-h-screen text-white relative">
+      {/* Header */}
+      <header
+        className="relative text-white text-center py-10 bg-cover bg-center"
+        style={{
+          backgroundImage: "url(/img/casa_inteligente.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          minHeight: "50vh",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="relative">
+          <Image
+            className="mx-auto mb-4 rounded-lg shadow-md"
+            src="/img/logo.png"
+            alt="logo"
+            width={300}
+            height={300}
+          />
+          <p className="text-3xl font-bold text-gray-100">
+            Tecnologia e conforto na sua casa
+          </p>
+        </div>
+      </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+      {/* Sobre Nós */}
+      <section className="p-16 text-center bg-gradient-to-b from-gray-100 to-white shadow-lg rounded-lg">
+        <h2 className="text-3xl font-bold text-gray-800">Sobre Nós</h2>
+        <p className="mt-6 text-gray-700 text-xl leading-relaxed">
+          Transformamos sua casa ou estabelecimento comercial em um ambiente
+          inteligente! Oferecemos soluções de automação, redes Wi-Fi e CFTV para
+          mais segurança, conforto e economia.
+        </p>
+      </section>
+      {/* Serviços */}
+      <section className="p-14 bg-black">
+        <h2 className="text-2xl font-bold text-center text-white">
+          Nossos Serviços
+        </h2>
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+          {[
+            {
+              icon: <FaHome className="text-gray-800 text-4xl mx-auto" />,
+              title: "Automação",
+              desc: "Controle de iluminação, som e climatização.",
+              images: ["/img/interruptor.jpg", "/img/alexa.jpg"],
+            },
+            {
+              icon: <FaWifi className="text-gray-800 text-4xl mx-auto" />,
+              title: "Redes Wi-Fi",
+              desc: "Conexão estável e de alta velocidade. Aumente o alcance da sua rede e cubra todos os ambientes.",
+              images: ["/img/ubiquiti.jpg", "/img/tplink.jpg"],
+            },
+            {
+              icon: <FaCamera className="text-gray-800 text-4xl mx-auto" />,
+              title: "CFTV",
+              desc: "Monitore sua residência ou estabelecimento comercial de onde estiver, e integre com seu sistema de automação.",
+              images: ["/img/cftv.jpg", "/img/camera.jpg"],
+            },
+          ].map((service, index) => (
+            <div
+              key={index}
+              className="p-6 border border-gray-700 rounded-lg shadow bg-white"
+            >
+              {service.icon}
+              <h3 className="font-bold mt-2 text-gray-600">{service.title}</h3>
+              <p className="text-gray-600 mb-4">{service.desc}</p>
+              <div className="grid grid-cols-2 gap-4">
+                {service.images.map((img, i) => (
+                  <Image
+                    key={i}
+                    className="w-full h-48 object-cover rounded-lg shadow-md border border-gray-300 hover:scale-105 transition-transform duration-300"
+                    src={img}
+                    alt={service.title}
+                    width={400}
+                    height={400}
+                  />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Benefícios */}
+      <section className="p-14 text-center bg-white">
+        <h2 className="text-2xl font-bold text-gray-800">
+          Benefícios da Automação
+        </h2>
+        <ul className="mt-6 text-gray-600 space-y-4">
+          <li className="text-lg">
+            ✔ Mais conforto: controle tudo pelo celular ou voz.
+          </li>
+          <li className="text-lg">
+            ✔ Economia de energia: iluminação automatizada.
+          </li>
+          <li className="text-lg">
+            ✔ Segurança reforçada: monitoramento em tempo real.
+          </li>
+          <li className="text-lg">
+            ✔ Valorização do imóvel: tecnologia agrega valor.
+          </li>
+        </ul>{" "}
+      </section>
+
+      {/* Contato */}
+      <footer className="p-14 bg-black text-white text-center">
+        <h2 className="text-2xl font-bold">Entre em Contato</h2>
+        <div className="mt-4 flex justify-center space-x-6">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="https://wa.me/+5513991545193"
+            className="text-green-500 text-4xl hover:scale-110 transition-transform duration-300"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+            <FaWhatsapp />
           </a>
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:diogoinovahome@gmail.com"
+            className="text-gray-300 text-4xl hover:scale-110 transition-transform duration-300"
           >
-            Read our docs
+            <FaEnvelope />
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
       </footer>
+      {/* Botão WhatsApp Fixo */}
+      <a
+        href="https://wa.me/+5513991545193"
+        className="fixed bottom-5 right-5 bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300"
+      >
+        <FaWhatsapp className="text-3xl" />
+      </a>
     </div>
   );
 }
