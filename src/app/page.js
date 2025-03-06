@@ -3,7 +3,7 @@ import {
   FaInstagram,
   FaHome,
   FaWifi,
-  FaCamera,
+  FaLock,
   FaEnvelope,
 } from "react-icons/fa";
 import Image from "next/image";
@@ -39,7 +39,7 @@ export default function Home() {
 
       {/* Sobre Nós */}
       <section className="p-16 text-center bg-gradient-to-b from-gray-100 to-white shadow-lg rounded-lg">
-        <h2 className="text-3xl font-bold text-gray-800">Sobre Nós</h2>
+        <h2 className="text-3xl font-bold text-gray-800">Nossos Serviços</h2>
         <p className="mt-6 text-gray-700 text-xl leading-relaxed">
           Transformamos sua casa ou estabelecimento comercial em um ambiente
           inteligente! Oferecemos soluções de automação, redes Wi-Fi e CFTV para
@@ -49,15 +49,12 @@ export default function Home() {
       </section>
       {/* Serviços */}
       <section className="p-14 bg-black">
-        <h2 className="text-2xl font-bold text-center text-white">
-          Nossos Serviços
-        </h2>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
           {[
             {
               icon: <FaHome className="text-gray-800 text-4xl mx-auto" />,
               title: "Automação",
-              desc: "Controle de iluminação, som e climatização.",
+              desc: "Controle de iluminação, som e climatização. Crie cenários de acordo com sua rotina.",
               images: ["/img/interruptor.jpg", "/img/alexa.jpg"],
             },
             {
@@ -67,10 +64,10 @@ export default function Home() {
               images: ["/img/ubiquiti.jpg", "/img/tplink.jpg"],
             },
             {
-              icon: <FaCamera className="text-gray-800 text-4xl mx-auto" />,
-              title: "CFTV",
-              desc: "Monitore sua residência ou estabelecimento comercial de onde estiver, e integre com seu sistema de automação.",
-              images: ["/img/cftv.jpg", "/img/camera.jpg"],
+              icon: <FaLock className="text-gray-800 text-4xl mx-auto" />,
+              title: "Fechaduras Inteligentes",
+              desc: "Tenha segurança com tecnologia, abra sua fechadura de onde estiver, e integre com seu sistema de automação.",
+              images: ["/img/fechadura.png", "/img/fechadura2.png"],
             },
           ].map((service, index) => (
             <div
@@ -98,26 +95,33 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      {/* Benefícios */}
-      <section className="p-14 text-center bg-white">
-        <h2 className="text-2xl font-bold text-gray-800">
-          Benefícios da Automação
-        </h2>
-        <ul className="mt-6 text-gray-600 space-y-4">
-          <li className="text-lg">
-            ✔ Mais conforto: controle tudo pelo celular ou voz.
-          </li>
-          <li className="text-lg">
-            ✔ Economia de energia: iluminação automatizada.
-          </li>
-          <li className="text-lg">
-            ✔ Segurança reforçada: monitoramento em tempo real.
-          </li>
-          <li className="text-lg">
-            ✔ Valorização do imóvel: tecnologia agrega valor.
-          </li>
-        </ul>{" "}
+      <section className="p-16 text-center bg-gradient-to-b from-gray-100 to-white shadow-lg rounded-lg">
+        <h2 className="text-3xl font-bold text-gray-800">Sobre Nós</h2>
+        <p className="mt-6 text-gray-700 text-xl leading-relaxed">
+          Transformando Experiência em Inovação: O Surgimento da Inova Smart
+          Home Com mais de 10 anos de experiência no setor de segurança
+          eletrônica, redes e automação, tive a oportunidade de atuar em
+          empresas líderes de mercado na região, gerenciando equipes técnicas,
+          implementando soluções avançadas e garantindo a excelência na
+          prestação de serviços. Durante essa jornada, aprendi a fundo as
+          necessidades dos clientes e as melhores práticas para oferecer
+          soluções que realmente fazem a diferença. Agora, chegou o momento de
+          dar um novo passo: transformar toda essa bagagem em um negócio
+          próprio, alinhado à inovação e à personalização que o mercado exige.
+          Assim nasce a Inova Smart Home, uma empresa focada em oferecer
+          tecnologia de ponta para automação residencial, redes Wi-Fi de alto
+          desempenho e sistemas de segurança inteligentes. O objetivo é claro:
+          proporcionar mais conforto, segurança e conectividade, sempre com
+          atendimento diferenciado e soluções sob medida. Minha missão é levar
+          para cada projeto o mesmo nível de qualidade e comprometimento que me
+          acompanhou ao longo da minha trajetória profissional, mas agora com
+          ainda mais liberdade para inovar e superar expectativas. Se você busca
+          soluções tecnológicas para transformar seu espaço, conte com a
+          experiência de quem já esteve à frente dos maiores desafios do setor e
+          agora está pronto para entregar o melhor, com um atendimento exclusivo
+          e personalizado. Inova Smart Home – Tecnologia para um dia a dia mais
+          inteligente.
+        </p>
       </section>
 
       {/* Contato */}
