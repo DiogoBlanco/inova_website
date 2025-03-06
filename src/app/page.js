@@ -135,7 +135,7 @@ export default function Home() {
             <FaInstagram />
           </a>
           <a
-            href="mailto:diogoinovahome@gmail.com"
+            href="mailto:contato@inovasmarthome.com.br"
             className="text-gray-300 text-4xl hover:scale-110 transition-transform duration-300"
           >
             <FaEnvelope />
