@@ -49,7 +49,7 @@ export default function Home() {
       </section>
       {/* Serviços */}
       <section className="p-14 bg-black">
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+        <div className="mt-6 grid gap-6 md:grid-cols-3 text-center">
           {[
             {
               icon: <FaHome className="text-gray-800 text-4xl mx-auto" />,
@@ -129,12 +129,14 @@ export default function Home() {
         <h2 className="text-2xl font-bold">Entre em Contato</h2>
         <div className="mt-4 flex justify-center space-x-6">
           <a
+            target="_blank"
             href="https://instagram.com/inova.smarthome"
             className="text-pink-400 text-4xl hover:scale-110 transition-transform duration-300"
           >
             <FaInstagram />
           </a>
           <a
+            target="_blank"
             href="mailto:contato@inovasmarthome.com.br"
             className="text-gray-300 text-4xl hover:scale-110 transition-transform duration-300"
           >
@@ -144,6 +146,7 @@ export default function Home() {
       </footer>
       {/* Botão WhatsApp Fixo */}
       <a
+        target="_blank"
         href="https://wa.me/+5513991545193"
         className="fixed bottom-5 right-5 bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300"
       >
