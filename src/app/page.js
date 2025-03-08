@@ -115,7 +115,7 @@ export default function Home() {
             alt="Minha Foto"
             width={200}
             height={200}
-            className="mx-auto rounded-full border-2 border-blue-900 shadow-md object-cover"
+            className="mx-auto rounded-full border-2 border-blue-500 shadow-md object-cover aspect-square"
           />
         </div>
       </section>
