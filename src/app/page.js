@@ -38,7 +38,7 @@ export default function Home() {
       </header>
 
       {/* Sobre Nós */}
-      <section className="p-16 text-center bg-gradient-to-b from-gray-200 to-white shadow-lg rounded-lg">
+      <section className="p-16 text-center bg-gray-300 from-gray-200 to-white shadow-lg rounded-lg">
         <h2 className="text-3xl font-bold text-blue-900">Nossos Serviços</h2>
         <p className="mt-6 text-gray-900 text-xl leading-relaxed">
           Transformamos sua casa ou estabelecimento comercial em um ambiente
@@ -75,7 +75,7 @@ export default function Home() {
           ].map((service, index) => (
             <div
               key={index}
-              className="p-6 border border-gray-700 rounded-lg shadow bg-white"
+              className="p-6 border border-gray-700 rounded-lg shadow bg-gray-300"
             >
               {service.icon}
               <h3 className="font-bold mt-2 text-blue-900 text-2xl">
@@ -99,7 +99,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="p-16 text-center bg-gradient-to-b from-gray-100 to-white shadow-lg rounded-lg">
+      <section className="p-16 text-center bg-gray-300 from-gray-100 to-white shadow-lg rounded-lg">
         <h2 className="text-3xl font-bold text-blue-900">Sobre Nós</h2>
         <p className="mt-6 text-gray-900 text-xl leading-relaxed">
           Transformando Experiência em Inovação: O Surgimento da Inova Smart
@@ -120,21 +120,46 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Perguntas Frequentes */}
+      <section className="p-16 text-center bg-black text-white shadow-lg rounded-lg">
+        <h2 className="text-3xl font-bold">Perguntas Frequentes</h2>
+        <div className="mt-6 text-gray-700 text-xl leading-relaxed text-left max-w-3xl mx-auto">
+          <p className="text-white">
+            <strong>Como funciona a automação residencial?</strong>
+            <br />A automação integra dispositivos inteligentes para você
+            controlar luzes, som, climatização e segurança via aplicativo ou
+            assistente virtual.
+          </p>
+          <p className="mt-4 text-white">
+            <strong>Quanto tempo demora a instalação?</strong>
+            <br />O tempo varia conforme o tamanho do projeto, mas geralmente é
+            rápido e eficiente.
+          </p>
+          <p className="mt-4 text-white">
+            <strong>Quais regiões vocês atendem?</strong>
+            <br />
+            Atendemos Bertioga e região do litoral norte de São Paulo.
+          </p>
+        </div>
+      </section>
+
       {/* Contato */}
       <footer className="p-14 bg-black text-white text-center">
         <h2 className="text-2xl font-bold">Entre em Contato</h2>
+        <p className="mt-4">
+          Fale conosco e descubra como podemos tornar seu ambiente mais
+          inteligente e seguro!
+        </p>
         <div className="mt-4 flex justify-center space-x-6">
           <a
             href="https://instagram.com/inova.smarthome"
             className="text-pink-400 text-4xl hover:scale-110 transition-transform duration-300"
-            aria-label="Instagram"
           >
             <FaInstagram />
           </a>
           <a
             href="mailto:contato@inovasmarthome.com.br"
             className="text-gray-300 text-4xl hover:scale-110 transition-transform duration-300"
-            aria-label="Email"
           >
             <FaEnvelope />
           </a>
