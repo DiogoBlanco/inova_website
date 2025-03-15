@@ -152,12 +152,14 @@ export default function Home() {
         </p>
         <div className="mt-4 flex justify-center space-x-6">
           <a
+            target="_blank"
             href="https://instagram.com/inova.smarthome"
             className="text-pink-400 text-4xl hover:scale-110 transition-transform duration-300"
           >
             <FaInstagram />
           </a>
           <a
+            target="_blank"
             href="mailto:contato@inovasmarthome.com.br"
             className="text-gray-300 text-4xl hover:scale-110 transition-transform duration-300"
           >
@@ -166,6 +168,7 @@ export default function Home() {
         </div>
       </footer>
       <a
+        target="_blank"
         href="https://wa.me/+5513996232740"
         className="fixed bottom-5 right-5 bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300"
       >
