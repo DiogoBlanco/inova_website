@@ -166,7 +166,7 @@ export default function Home() {
         </div>
       </footer>
       <a
-        href="https://wa.me/+5513991545193"
+        href="https://wa.me/+5513996232740"
         className="fixed bottom-5 right-5 bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300"
       >
         <FaWhatsapp className="text-3xl" />
