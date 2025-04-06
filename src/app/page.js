@@ -109,15 +109,6 @@ export default function Home() {
           implementando soluções avançadas e garantindo a excelência na
           prestação de serviços.
         </p>
-        <div className="mt-8">
-          <Image
-            src="/img/eu.png"
-            alt="Minha Foto"
-            width={200}
-            height={200}
-            className="mx-auto rounded-full border-2 border-blue-500 shadow-md object-cover aspect-square"
-          />
-        </div>
       </section>
 
       {/* Perguntas Frequentes */}
